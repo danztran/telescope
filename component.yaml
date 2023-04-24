@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: telescope
+  description: metrics exposer for weave scope
+  tags:
+  - service-mesh
+  - weave-scope
+  annotations:
+    GitlabRepository: sre/telescope
+    Grafana: telescope
+    SonarQube: sre/telescope
+    HelmChart: app-backend/telescope.yaml
+spec:
+  type: service
+  owner: nguyentranbao@chotot.vn
+  lifecycle: deprecated

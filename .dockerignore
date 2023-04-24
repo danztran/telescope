@@ -1,0 +1,10 @@
+.git
+vendor
+mocks
+telescope
+main
+.vscode
+coverage.out
+.tmp
+tmp
+.env

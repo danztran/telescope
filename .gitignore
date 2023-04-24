@@ -1,0 +1,8 @@
+.env
+vendor
+telescope
+main
+.vscode
+coverage.out
+.tmp
+tmp

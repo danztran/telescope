@@ -1,0 +1,37 @@
+server:
+  port: 9090
+  graceful_seconds: 30
+  log_request: true
+  log_response: true
+  cors: true
+  pprof: false
+
+scope:
+  address: http://localhost:4040
+
+collector:
+  topology_id: containers
+  skip_patterns:
+  - Unmanaged
+  - Uncontained
+  - The Internet
+  - node_exporter
+  - ^$
+  - \.
+  - kube-apiserver
+  max_node_handlers: 1
+  collect_duration: 5s
+  reset_interval: 3h
+  metrics:
+    subsystem: ''
+    namespace: ''
+
+promscope:
+  get_connections_step: 30m
+  prometheus:
+    address: https://sample.prometheus.org
+    token:
+
+mapnode:
+  get_connections_since: 48h
+  update_interval: 1h
